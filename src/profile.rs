@@ -2,36 +2,36 @@ use serde::Deserialize;
 
 #[derive(Debug, Deserialize)]
 pub struct ProfileConfig {
-    name: String,
-    elevenlabs: ElevenLabsConfig,
-    openai: OpenAIConfig
+    pub name: String,
+    pub elevenlabs: ElevenLabsConfig,
+    pub openai: OpenAIConfig,
 }
 
 #[derive(Debug, Deserialize)]
 pub struct ElevenLabsConfig {
-    tts: ElevenLabsTTSConfig,
-    stt: ElevenLabsSTTConfig
+    pub tts: ElevenLabsTTSConfig,
+    pub stt: ElevenLabsSTTConfig,
 }
 
 #[derive(Debug, Deserialize)]
 pub struct ElevenLabsTTSConfig {
-    model_id: String,
-    output_format: String,
-    voice_id: String
+    pub model_id: String,
+    pub output_format: String,
+    pub voice_id: String,
 }
 
 #[derive(Debug, Deserialize)]
 pub struct ElevenLabsSTTConfig {
-    model_id: String
+    pub model_id: String,
 }
 
 #[derive(Debug, Deserialize)]
 pub struct OpenAIConfig {
-    model_id: String,
-    model_format: String,
-    model_temp: f32,
-    model_tokens: i32,
-    model_top_p: f32,
-    model_store: bool,
-    system_prompt: String
-} 
+    pub model_id: String,
+    pub model_format: String,
+    pub model_temperature: f32,
+    pub model_tokens: i32,
+    pub model_top_p: f32,
+    pub model_store: bool,
+    pub system_prompt: String,
+}
